@@ -17,7 +17,7 @@ h3 {
 .hero-tittle::before {
     content: '';
     background-image: url("Images/image7.png");
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     top: 0;
     left: 0;
@@ -33,9 +33,13 @@ h3 {
     color: #fff;
     text-align: center;
     padding: 50px 50px 10px 50px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hero-conexion {
+    width: 350px;
+    margin-left: 20px;
 }
 .name-glamping {
     text-align: left;
@@ -52,13 +56,20 @@ h3 {
     font-size: 150px;
     font-weight: lighter;
 }
+.abrir-menu {
+    display: none;
+}
+nav {
+    background-color: transparent;
+    box-shadow: none;
+}
+.nav-list li a {
+    
+}
 .hero-buttons {
     position: absolute;
     right: 70px;
     bottom: 10px;
-}
-.container-conexion {
-   
 }
 .conexion, .natural {
     margin: 0;
@@ -105,7 +116,6 @@ h3 {
 }
 .carousel {
     min-height: 500px;
-
 }
 .carousel .carousel-item {
     display: flex;
@@ -135,20 +145,31 @@ h3 {
 }
 .container-valoraciones {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 
+        repeat(
+            auto-fit, 
+            minmax(300px, 1fr)
+        );
+    gap: 20px;
+
 }
 .titulo-valoracion {
     font-size: 48px;
 }
 .review {
     background-color: #ffffff;
-    margin: 0 10px;
     border-radius: 15px;
-    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 6fr;
 }
-.review img {
+.image-container img {
+    width: 70px;
+    margin: 10px;
+}
+.review-content {
+    margin: 10px;
+}
+.review-content img {
     width: 70px;
 }
 .review h3 {
@@ -156,7 +177,7 @@ h3 {
     font-weight: bold;
 }
 .review p {
-    font-size: 14px;
+    font-size: 13px;
 }
 .social-section {
     background-color: #333;
@@ -204,4 +225,40 @@ h3 {
 }
 .row {
     margin: 0;
+}
+@media (max-width:800px) {
+    .carousel {
+        perspective: 300px;
+    }
+    .hero-tittle {
+        position: unset;
+        padding: 50px 50px 30px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .btn-reserva {
+        position: unset;
+        font-size: 20px;
+        width: 8em;
+    }
+    .description-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:800px) {
+    /*.abrir-menu {
+        display: block;
+    }
+    .nav-buttons {
+        display: none;
+    }*/
+    .nav-buttons {
+    
+        top: 0;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
 }
