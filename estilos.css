@@ -1,28 +1,73 @@
 /* Estilos CSS para la página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0;
 }
 h3 {
     margin: 0;
     padding: 0;
 }
-.hero-tittle {
+.hero-tittle::before {
+    content: '';
     background-image: url("Images/xYxqMUM.jpeg");
-    opacity: 70%;
     background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+}
+.hero-tittle {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
     color: #fff;
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 50px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+}
+.name-glamping {
+    text-align: left;
+    margin: 0 0 -30px 0;
+    padding: 0;
+    font-size: 3em;
 }
 .name-malibu {
+    text-align: left;
+    margin: 0;
+    padding: 0;
     color: #007C57;
+    font-family: "Inspiration", cursive;
+    font-size: 150px;
+    font-weight: lighter;
+}
+.hero-buttons {
+
+}
+.container-conexion {
+   
+}
+.conexion, .natural {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+.conexion {
+    text-align: left;
+}
+.natural {
+    text-align: right;
 }
 .description-section {
-    padding: 20px;
+    position: relative;
+    padding: 20px 50px;
     background-color: #007C57;
     color: #fff;
     background-size: cover;
@@ -45,18 +90,20 @@ h3 {
     text-align: center;
     padding: 20px 0;
 }
-/* Estilos para los botones */
 .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #FFB800;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 10px;
 }
 .btn-reserva {
-    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    width: 5em;
     align-self: center;
     font-size: 35px;
     font-weight: bold;
@@ -69,4 +116,5 @@ h3 {
     margin: 10px;
     text-transform: uppercase;
     transform: rotate(8deg);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
 }
