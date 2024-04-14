@@ -1,9 +1,14 @@
-/* Estilos CSS para la página */
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: "Nunito Sans", sans-serif;
+    min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+
 }
 h3 {
     margin: 0;
@@ -27,14 +32,14 @@ h3 {
     background-color: rgba(255, 255, 255, 0.6);
     color: #fff;
     text-align: center;
-    padding: 50px 50px;
+    padding: 50px 50px 10px 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-content: space-around;
 }
 .name-glamping {
     text-align: left;
-    margin: 0 0 -30px 0;
+    margin: 0 0 -20px 0;
     padding: 0;
     font-size: 3em;
 }
@@ -48,7 +53,9 @@ h3 {
     font-weight: lighter;
 }
 .hero-buttons {
-
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
 }
 .container-conexion {
    
@@ -56,7 +63,8 @@ h3 {
 .conexion, .natural {
     margin: 0;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 3.5em;
+    font-weight: bold;
     text-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
 }
 .conexion {
@@ -76,13 +84,55 @@ h3 {
 }
 .subtittle, .name-glamping {
     color: #FFB800;
+    font-family: "Mogra", system-ui;
+    font-weight: lighter;
+}
+.subtittle {
+    font-size: 2em;
 }
 .gallery-section {
-    padding: 50px 0;
+    background-color: #f5f5f5;
+    padding: 0;
+}
+.gallery-tittle {
+    margin: 0;
+    padding: 20px;
+    color: #007C57;
+    font-family: "Mogra", system-ui;
+    font-size: 2.5em;
+    font-weight: lighter;
+    text-align: center;
+}
+.carousel {
+    min-height: 500px;
+
+}
+.carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+}
+.carousel .carousel-item img {
+    object-fit: cover;
+    border-radius: 15px;
+}
+.carousel .indicators .indicator-item {
+    background: #007C57;
+    margin: 70px 10px;
+}
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #333;
 }
 .reviews-section {
     background-color: #f5f5f5;
     padding: 50px 0;
+}
+.container-valoraciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .social-section {
     background-color: #333;
@@ -91,8 +141,6 @@ h3 {
     padding: 20px 0;
 }
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #FFB800;
     color: #fff;
     text-decoration: none;
@@ -101,14 +149,14 @@ h3 {
 }
 .btn-reserva {
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 70px;
-    width: 5em;
+    width: 7em;
     align-self: center;
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    padding: 40px 30px;
+    padding: 20px 30px;
     background-color: #fff;
     color: #FFB800;
     text-decoration: none;
@@ -117,4 +165,7 @@ h3 {
     text-transform: uppercase;
     transform: rotate(8deg);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+.row {
+    margin: 0;
 }
