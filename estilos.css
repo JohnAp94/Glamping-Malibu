@@ -16,7 +16,7 @@ h3 {
 }
 .hero-tittle::before {
     content: '';
-    background-image: url("Images/xYxqMUM.jpeg");
+    background-image: url("Images/xYxqMUM1.jpeg");
     background-size: cover;
     position: absolute;
     top: 0;
