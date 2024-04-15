@@ -10,3 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
         noWrap: false
     });
 });
+
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
+const galeria = document.querySelector("#galeria-btn");
+
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
+
+galeria.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})

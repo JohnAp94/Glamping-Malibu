@@ -8,7 +8,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
-
 }
 h3 {
     margin: 0;
@@ -17,7 +16,7 @@ h3 {
 .hero-tittle::before {
     content: '';
     background-image: url("Images/image7.png");
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,15 +55,28 @@ h3 {
     font-size: 150px;
     font-weight: lighter;
 }
-.abrir-menu {
+.abrir-menu, .cerrar-menu{
     display: none;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.abrir-menu {
+    font-size: 4rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #007C57;
+}
+.cerrar-menu {
+    color: #FFB800;
+}
+nav i {
+    font-size: 3rem;
 }
 nav {
     background-color: transparent;
     box-shadow: none;
-}
-.nav-list li a {
-    
 }
 .hero-buttons {
     position: absolute;
@@ -190,9 +202,6 @@ nav {
     display: flex;
     justify-content: center;
 }
-.redes {
-
-}
 .redes img{
     width: 80px;
     margin: 0 20px;
@@ -237,7 +246,20 @@ nav {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    .hero-tittle::before {
+        height: 500px;
+    }
+    .tittle {
+        width: 50vw;
+    }
+    .name-glamping{
+        font-size: 2em;
+    }
+    .name-malibu {
+        font-size: 100px;
+    }
     .btn-reserva {
+        margin-top: 20px;
         position: unset;
         font-size: 20px;
         width: 8em;
@@ -245,20 +267,52 @@ nav {
     .description-section {
         display: flex;
         flex-wrap: wrap;
+        align-items: end;
     }
 }
 @media screen and (max-width:800px) {
-    /*.abrir-menu {
+    .abrir-menu, .cerrar-menu {
         display: block;
     }
-    .nav-buttons {
-        display: none;
-    }*/
-    .nav-buttons {
-    
-        top: 0;
+    .btn {
+        background-color: transparent;
+        text-decoration: none;
+        border-radius: 0%;
     }
-    .nav-list{
+    .hero-buttons {
+        position: unset;
+    }
+    .nav-buttons {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
         flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 50vh;
+        background-color: #007C57;
+        padding: 3rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .nav-buttons.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-buttons ul li a{
+        margin: 0;
+    }
+    .nav-list li a {
+        color: #FFB800;
+        background-color: #ECECEC;
     }
 }

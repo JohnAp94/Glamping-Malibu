@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glamping Malibú</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +27,13 @@
                 </div>
             </div>
             <div class="hero-buttons">
-                <button class="abrir-menu">Abrir</button>
-                <nav class="nav-buttons">
+                <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+                <nav class="nav-buttons" id="nav">
+                    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
                     <ul class="nav-list">
                         <li><a href="#inicio" class="btn">Inicio</a></li>
                         <li><a href="#quienes-somos" class="btn">Quiénes Somos</a></li>
-                        <li><a href="#galeria" class="btn">Galería</a></li>
+                        <li><a href="#galeria" class="btn" id="galeria-btn">Galería</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,12 +49,11 @@
         </div>
         <a href="#reserva" class="btn-reserva">¡RESERVA AQUÍ!</a>
     </section>
-
-    <section id="galeria" class="gallery-section">
-        <div class="">
+    <section class="gallery-section">
+        <div>
             <div class="row">
                 <div class="">
-                    <h2 class="gallery-tittle">¡Vive tu mejor experiencia!</h2>
+                    <h2 class="gallery-tittle" id="galeria">¡Vive tu mejor experiencia!</h2>
                     <div class="carousel">
                         <div class="carousel-item"><img src="Images/image01.jpg" alt="Imagen 1"></div>
                         <div class="carousel-item"><img src="Images/image02.jpg" alt="Imagen 2"></div>
