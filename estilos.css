@@ -206,6 +206,9 @@ nav {
     width: 80px;
     margin: 0 20px;
 }
+.pie-de-pagina {
+    margin-top: 30px;
+}
 .btn {
     background-color: #FFB800;
     color: #fff;
