@@ -42,12 +42,14 @@ h3 {
 }
 .name-glamping {
     text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0 0 -20px 0;
     padding: 0;
     font-size: 3em;
 }
 .name-malibu {
     text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
     color: #007C57;
@@ -88,7 +90,7 @@ nav {
     padding: 0;
     font-size: 3.5em;
     font-weight: bold;
-    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.5);
 }
 .conexion {
     text-align: left;
